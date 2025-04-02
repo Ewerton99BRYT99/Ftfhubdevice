@@ -1,0 +1,76 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local DeviceChooser = Instance.new("ScreenGui")
+local Chooser = Instance.new("Frame")
+local MobileDevice = Instance.new("TextButton")
+local PCDevice = Instance.new("TextButton")
+local Device = Instance.new("TextLabel")
+
+--Properties:
+
+DeviceChooser.Name = "DeviceChooser"
+DeviceChooser.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+DeviceChooser.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+DeviceChooser.ResetOnSpawn = false
+
+Chooser.Name = "Chooser"
+Chooser.Parent = DeviceChooser
+Chooser.BackgroundColor3 = Color3.fromRGB(103, 103, 103)
+Chooser.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Chooser.BorderSizePixel = 0
+Chooser.Position = UDim2.new(0.0971074402, 0, 0.0534825772, 0)
+Chooser.Size = UDim2.new(0, 417, 0, 220)
+Chooser.Draggable = true
+
+MobileDevice.Name = "MobileDevice"
+MobileDevice.Parent = Chooser
+MobileDevice.BackgroundColor3 = Color3.fromRGB(135, 135, 135)
+MobileDevice.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MobileDevice.BorderSizePixel = 0
+MobileDevice.Position = UDim2.new(0.163069546, 0, 0.215656564, 0)
+MobileDevice.Size = UDim2.new(0, 275, 0, 47)
+MobileDevice.Font = Enum.Font.SourceSans
+MobileDevice.Text = "Mobile"
+MobileDevice.TextColor3 = Color3.fromRGB(227, 227, 227)
+MobileDevice.TextScaled = true
+MobileDevice.TextSize = 14.000
+MobileDevice.TextWrapped = true
+MobileDevice.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/Ewerton99BRYT99/Ftfhubmobile/refs/heads/main/Ftfhubmobilesource.lua',true))()
+Chooser.Visible = false
+end)
+
+PCDevice.Name = "PCDevice"
+PCDevice.Parent = Chooser
+PCDevice.BackgroundColor3 = Color3.fromRGB(135, 135, 135)
+PCDevice.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PCDevice.BorderSizePixel = 0
+PCDevice.Position = UDim2.new(0.163069546, 0, 0.601010084, 0)
+PCDevice.Size = UDim2.new(0, 275, 0, 47)
+PCDevice.Font = Enum.Font.SourceSans
+PCDevice.Text = "PC"
+PCDevice.TextColor3 = Color3.fromRGB(227, 227, 227)
+PCDevice.TextScaled = true
+PCDevice.TextSize = 14.000
+PCDevice.TextWrapped = true
+PCDevice.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/Ewerton99BRYT99/ftfhub/refs/heads/main/ftfhubsource.lua',true))()
+Chooser.Visible = false
+end)
+
+Device.Name = "Device"
+Device.Parent = Chooser
+Device.BackgroundColor3 = Color3.fromRGB(135, 135, 135)
+Device.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Device.BorderSizePixel = 0
+Device.Size = UDim2.new(0, 417, 0, 33)
+Device.Font = Enum.Font.SourceSans
+Device.Text = "Choose Your Device"
+Device.TextColor3 = Color3.fromRGB(227, 227, 227)
+Device.TextScaled = true
+Device.TextSize = 14.000
+Device.TextWrapped = true
+Device.Draggable = true
